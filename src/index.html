@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="app" class="app-container light">
+    <!-- Header Section -->
+    <div class="header">
+      <h1>Interactive Dashboard</h1>
+      <div class="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle Dark Mode">
+        Toggle Dark Mode
+      </div>
+    </div>
+
+    <!-- Search Section -->
+    <div class="search-bar-container">
+      <input type="text" class="search-bar" placeholder="Search Users..." id="searchInput">
+      <button class="clear-search" onclick="clearSearch()">Clear</button>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading" style="display:none;">
+      <div class="spinner"></div>
+      <span>Loading...</span>
+    </div>
+
+    <!-- Error Message -->
+    <div id="errorMessage" class="error-message" style="display:none;">
+      <span>Something went wrong. Try again!</span>
+    </div>
+
+    <!-- User Cards Section -->
+    <div id="userCards" class="user-cards">
+      <!-- User Cards will be dynamically inserted here -->
+    </div>
+
+    <!-- Pie Chart Section (Placeholder) -->
+    <div id="pieChart" class="pie-chart">
+      <canvas id="pieChartCanvas" width="400" height="400"></canvas>
+    </div>
+
+    <!-- Tweets Section -->
+    <div id="tweets" class="tweets">
+      <h3>Tweets</h3>
+      <ul id="tweetList">
+        <!-- Tweets will be dynamically inserted here -->
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
